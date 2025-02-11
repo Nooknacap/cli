@@ -2697,8 +2697,8 @@ npm cache clean [<key>]
 npm cache ls [<name>@<version>]
 npm cache verify
 npm cache npx ls
-npm cache npx rm [<key>]
-npm cache npx info [<key>]
+npm cache npx rm [<key>...]
+npm cache npx info <key>...
 
 Options:
 [--cache <cache>]
@@ -2711,8 +2711,8 @@ npm cache clean [<key>]
 npm cache ls [<name>@<version>]
 npm cache verify
 npm cache npx ls
-npm cache npx rm [<key>]
-npm cache npx info [<key>]
+npm cache npx rm [<key>...]
+npm cache npx info <key>...
 \`\`\`
 
 Note: This command is unaware of workspaces.
