@@ -5,6 +5,7 @@ const MockRegistry = require('@npmcli/mock-registry')
 const cacache = require('cacache')
 const fs = require('node:fs')
 const path = require('node:path')
+const { cleanCwd } = require('../../fixtures/clean-snapshot.js')
 
 const pkg = 'test-package'
 
@@ -23,7 +24,7 @@ const createNpxCacheEntry = (npxCacheDir, hash, pkgJson, shrinkwrapJson) => {
 }
 
 t.cleanSnapshot = str => {
-  return str
+  return cleanCwd(str)
     .replace(/Finished in [0-9.s]+/g, 'Finished in xxxs')
     .replace(/Cache verified and compressed (.*)/, 'Cache verified and compressed ({PATH})')
 }
